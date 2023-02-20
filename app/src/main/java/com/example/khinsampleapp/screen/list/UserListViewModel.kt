@@ -14,7 +14,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class UserListFragmentViewModel @Inject constructor(
+class UserListViewModel @Inject constructor(
     private val repository: Repository
 ) : ViewModel() {
 
@@ -38,7 +38,9 @@ class UserListFragmentViewModel @Inject constructor(
                 }
 
             userListDataFlow.collect { userList ->
-                _userList.value = userList
+                _userList.value = userList.sortedWith(
+                    compareBy { it.id }
+                )
                 isLoadingData = false
             }
         }

@@ -22,7 +22,7 @@ import com.example.khinsampleapp.screen.userdetail.recyclerview.RepositoryListAd
 class UserDetailFragment : Fragment() {
 
     private lateinit var binding: FragmentUserDetailBinding
-    private val viewModel by viewModels<UserDetailFragmentViewModel>()
+    private val viewModel by viewModels<UserDetailViewModel>()
 
     private val repositoryListAdapter = RepositoryListAdapter()
 

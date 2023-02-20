@@ -14,7 +14,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class UserDetailFragmentViewModel @Inject constructor(
+class UserDetailViewModel @Inject constructor(
     private val repository: Repository
 ) : ViewModel() {
 

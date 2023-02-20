@@ -19,7 +19,7 @@ import com.example.khinsampleapp.screen.userdetail.UserDetailActivity
 class UserListFragment : Fragment() {
 
     private lateinit var binding: FragmentUserListBinding
-    private val viewModel by viewModels<UserListFragmentViewModel>()
+    private val viewModel by viewModels<UserListViewModel>()
 
     private val userListAdapter = UserListAdapter()
 
