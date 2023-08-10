@@ -23,7 +23,7 @@ class UserListViewModel @Inject constructor(
 
     private var isLoadingData = false
 
-    fun loadData() {
+    fun loadData2() {
         if (isLoadingData) return
         isLoadingData = true
         viewModelScope.launch {
@@ -49,7 +49,7 @@ class UserListViewModel @Inject constructor(
     fun loadNextItemsIfNeeded(lastVisibleItem: Int, totalItemsInList: Int) {
         // Pagination: Start loading the next items onto the list when we are about to reach the end
         if (lastVisibleItem + 3 > totalItemsInList) {
-            loadData()
+            loadData2()
         }
     }
 
