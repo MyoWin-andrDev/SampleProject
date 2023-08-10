@@ -33,7 +33,7 @@ class UserListFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        viewModel.loadData()
+        viewModel.loadDataUserList()
 
         with(binding) {
             // Set up list of users
