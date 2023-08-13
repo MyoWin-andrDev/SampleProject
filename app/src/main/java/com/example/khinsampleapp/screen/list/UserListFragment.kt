@@ -19,7 +19,7 @@ import com.example.khinsampleapp.screen.userdetail.UserDetailActivity
 class UserListFragment : Fragment() {
 
     private lateinit var binding: FragmentUserListBinding
-    private val viewModel by viewModels<UserListFragmentViewModel>()
+    private val viewModel by viewModels<UserListViewModel>()
 
     private val userListAdapter = UserListAdapter()
 
@@ -33,7 +33,7 @@ class UserListFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        viewModel.loadData()
+        viewModel.loadData2()
 
         with(binding) {
             // Set up list of users

@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
+import com.example.khinsampleapp.common.textOrGone
 import com.example.khinsampleapp.databinding.ViewUserListEntryBinding
 import com.example.khinsampleapp.repository.network.model.User
 
@@ -47,8 +48,8 @@ class UserListAdapter : RecyclerView.Adapter<UserListAdapter.UserListViewHolder>
 
         fun update(user: User) {
             with(binding) {
-                userListEntryId.text = user.id.toString()
-                userListEntryLogin.text = "@${user.login}"
+                userListEntryId.text = "UserID-${user.id.toString()}"
+                userListEntryLogin.textOrGone(user.login)
                 userListEntryUrl.text = user.htmlUrl
                 Glide.with(root.context)
                     .load(Uri.parse(user.avatarUrl))
